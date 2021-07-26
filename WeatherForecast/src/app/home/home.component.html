@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.component.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>WeatherForecast</title>
+  </head>
+  <body>
+    <!-- <div>Temperature: {{ forecasts.main.temp }}</div> -->
+    <!-- <button (click)="getForecast()">Запросить погоду через API</button> -->
+    <div class="header__container">
+      <div class="header__content">
+        <div class="header">Check the weather</div>
+        <h2 class="text">Chose your city</h2>
+
+        <div class="header-form" id="my Dropdown">
+          <div class="input__container">
+            <input
+              type="text"
+              class="header-input"
+              id="myInput"
+              onkeyup="filterFunction()"
+            />
+            <button (click)="getCityName()" class="input-button">
+              <img src="/src/app/img/scope.png" class="input-button-scope" />
+            </button>
+          </div>
+          <div class="container">
+            <div class="option">Moscow</div>
+            <div class="option">New-York</div>
+            <div class="option">Tokyo</div>
+            <div class="option">Kiev</div>
+          </div>
+          <!-- <input type="text" class="header-input" id="city-input" /> -->
+          <!-- <button (click)="getCityName()">Узнать!</button> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

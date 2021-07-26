@@ -1,0 +1,132 @@
+div, h2, .header-input
+{
+  font-family: Roboto;
+  font-style: normal;
+}
+
+
+.header
+{
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 112px;
+  margin-bottom:64px;
+  margin-top: 247px;
+  display: flex;
+}
+
+.text
+{
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.header__container
+{
+  display: flex;
+  flex-direction: column;
+  background: url(../img/background.png);
+  height: 1080px;
+  width: 100%;
+}
+
+.header__content
+{
+  height: 1080px;
+  display: flex;
+  margin-left: 160px;
+  flex-direction: column;
+}
+
+
+
+.header-form
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 788px;
+}
+
+.input__container
+{
+  display: flex;
+}
+
+.header-input
+{
+  width: 670px;
+  height: 56px;
+  border-radius: 16px 0px 0px 0px ;
+  border-width: 1px;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(115, 115, 115, 0.5); 
+  padding-left: 28px;
+}
+
+.header-input:focus-visible
+{
+  outline: 0;
+}
+
+.input-button
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 56px;
+  border-radius: 0px 16px 0px 0px ;
+  border-width: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(115, 115, 115, 0.5);  
+}
+
+.input-button-scope
+{
+  width: 26px;
+  height: 26px;
+}
+
+.container
+{
+  border: 1px solid;
+  border-radius: 0px 0px 16px 16px;
+  border-width: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(115, 115, 115, 0.5); 
+  padding: 0;
+}
+
+.option
+{
+  display: block;
+  color: black;
+  padding: 12px 28px;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  border-radius: 16px;
+  border-width: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(115, 115, 115, 0.5);
+}
+
+.option:hover
+{
+  font-weight: normal;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0px;
+}
+
+
+
+
+
+
+
+

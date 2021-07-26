@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WeatherForecast</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <script>
+      var cities = [
+        "Abakan",
+        "Azov",
+        "Alexandrov",
+        "Aleksin",
+        "Almetyevsk",
+        "Anapa",
+        "Angarsk",
+        "Anzhero",
+        "Apatity",
+        "Arzamas",
+        "Armavir",
+        "Arseniev",
+      ];
+
+      function filterFunction() {
+        input = document.getElementById("myInput").value;
+        var f = 0;
+        for (var i = 0; i < cities.length; i++) {
+          if (cities[i].indexOf(input) != -1) {
+            f++;
+            document.getElementsByClassName(option)[f].value = cities[i];
+          }
+        }
+      }
+    </script>
+    <app-root></app-root>
+  </body>
+</html>
