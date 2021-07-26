@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { WeatherForecastServiceService } from '../weather-forecast-service.service';
-import { Forecast } from './forecast';
-
 
 @Component({
   selector: 'home',
@@ -18,7 +16,6 @@ export class HomeComponent implements OnInit {
     name: new FormControl(''),
   });
 
-
   constructor(private weatherForecastServiceService: WeatherForecastServiceService) {
   }
 
@@ -26,7 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   getForecast(): void {
-    this.forecasts = this.weatherForecastServiceService.getForecast(this.cityname).subscribe(data => console.log(data)); //this.forecasts = data);    
+    this.forecasts = this.weatherForecastServiceService.getForecast(this.cityname).subscribe(data => console.log(data));
   }
 
   getCityName(): void {
@@ -34,10 +31,4 @@ export class HomeComponent implements OnInit {
     console.log(this.cityname)
     this.getForecast()
   }
-
-  
 }
-
-
-
-

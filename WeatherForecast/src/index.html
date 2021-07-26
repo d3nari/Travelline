@@ -22,15 +22,20 @@
         "Arzamas",
         "Armavir",
         "Arseniev",
+        "Moscow"
       ];
 
       function filterFunction() {
         input = document.getElementById("myInput").value;
+        if(input == "") 
+          return;
         var f = 0;
         for (var i = 0; i < cities.length; i++) {
           if (cities[i].indexOf(input) != -1) {
+            if(document.getElementsByClassName("option")[f] != undefined) {
+              document.getElementsByClassName("option")[f].innerHTML = cities[i];
+            }
             f++;
-            document.getElementsByClassName(option)[f].value = cities[i];
           }
         }
       }
