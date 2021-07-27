@@ -359,3 +359,24 @@
   *::after {
     box-sizing: border-box;
   }
+
+  .option
+{
+  display: block;
+  color: black;
+  padding: 12px 28px;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  border-radius: 16px;
+  border-width: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(115, 115, 115, 0.5);
+}
+
+.option:hover
+{
+  font-weight: normal;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0px;
+}

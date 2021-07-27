@@ -29,17 +29,37 @@
         "Moscow",
       ];
 
+      var f = 0;
+
       function filterFunction() {
+        if (f != 0) {
+          deleteFunction(f);
+        }
+        f = 0;
         input = document.getElementById("myInput").value;
         if (input == "") return;
-        var f = 0;
-        for (var i = 0; i < cities.length; i++) {
+        for (var i = 0; i < cities.length && f < 3; i++) {
           if (cities[i].indexOf(input) != -1) {
             if (document.getElementsByClassName("option")[f] != undefined) {
-              document.getElementsByClassName("option")[f].innerHTML =
-                cities[i];
+              createFunction(i, f);
+              f++;
             }
-            f++;
+          }
+        }
+      }
+
+      function createFunction(i, f) {
+        let div = document.createElement("div");
+        div.className = "option";
+        div.innerHTML = cities[i];
+        div.id = f;
+        container.append(div);
+      }
+
+      function deleteFunction(f) {
+        for (var i = 0; i <= f; i++) {
+          if (document.getElementById(i) != null) {
+            document.getElementById(i).remove();
           }
         }
       }
