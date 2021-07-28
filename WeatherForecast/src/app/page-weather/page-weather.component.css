@@ -24,6 +24,8 @@ div, h2, .weather-text
 .weather-content
 {
   margin-bottom: 150px;
+  display: flex;
+  align-items: center;
 }
 
 .wind
@@ -51,4 +53,18 @@ div, h2, .weather-text
 {
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.weather-text
+{
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  color: #575757;
+}
+
+#temperature, #precipitation, #wind
+{
+  margin-left: 3px;
+  margin-top: 1px;
 }

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { WeatherForecastServiceService } from './weather-forecast-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PageWeatherComponent } from './page-weather/page-weather.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,11 @@ import { PageWeatherComponent } from './page-weather/page-weather.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'app-page-weather', component: PageWeatherComponent }, 
+    ])
   ],
   providers: [WeatherForecastServiceService],
   bootstrap: [AppComponent]

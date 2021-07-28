@@ -11,7 +11,11 @@
           id="myInput"
           onkeyup="filterFunction()"
         />
-        <button (click)="getCityName()" class="input-button">
+        <button
+          (click)="getCityName()"
+          [routerLink]="['/app-page-weather']"
+          class="input-button"
+        >
           <img src="assets/scope.png" class="input-button-scope" />
         </button>
       </div>

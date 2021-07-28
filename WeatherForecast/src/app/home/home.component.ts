@@ -30,6 +30,6 @@ export class HomeComponent implements OnInit {
   getCityName(): void {
     this.cityname = document.getElementsByTagName("input")[0].value;
     console.log(this.cityname)
-    this.getForecast()
+    this.getForecast();
   }
 }

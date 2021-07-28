@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-page-weather',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-weather.component.css']
 })
 export class PageWeatherComponent implements OnInit {
-
+  @Input() cityName : string = ""; 
   constructor() { }
 
   ngOnInit(): void {
