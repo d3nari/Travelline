@@ -1,0 +1,54 @@
+div, h2, .weather-text
+{
+  font-family: Roboto;
+  font-style: normal;
+}
+
+.weather__wrapper
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: none;
+  height: 1080px;
+  width: 100%;
+}
+
+.weather-container
+{
+  margin: 180px 0px 260px 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-content
+{
+  margin-bottom: 150px;
+}
+
+.wind
+{
+  width: 120px;
+  height: 90px;
+  background: url(../img/wind.png);
+}
+
+.temperature
+{
+  width: 120px;
+  height: 90px;
+  background: url(../img/temperature.png);
+}
+
+.precipitation
+{
+  width: 120px;
+  height: 90px;
+  background: url(../img/rain.png);
+}
+
+.weather-image
+{
+  background-size: contain;
+  background-repeat: no-repeat;
+}

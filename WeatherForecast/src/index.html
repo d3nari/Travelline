@@ -63,6 +63,14 @@
           }
         }
       }
+
+      function pushInto() {
+        container.onclick = function (e) {
+          let target = event.target;
+          console.log(target.innerHTML);
+          document.getElementById("myInput").value = target.innerHTML;
+        };
+      }
     </script>
     <app-root></app-root>
   </body>

@@ -8,6 +8,7 @@ import { WeatherForecastServiceService } from '../weather-forecast-service.servi
   styleUrls: ['./home.component.css', '../normalize.css']
   
 })
+
 export class HomeComponent implements OnInit {
   forecasts: any = [];
   cityname: any = [];
