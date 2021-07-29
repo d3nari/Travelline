@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { WeatherForecastServiceService } from '../weather-forecast-service.service';
 
+
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
@@ -17,8 +18,8 @@ export class HomeComponent implements OnInit {
     name: new FormControl(''),
   });
 
-  constructor(private weatherForecastServiceService: WeatherForecastServiceService) {
-  }
+  constructor(private weatherForecastServiceService: WeatherForecastServiceService) {}
+
 
   ngOnInit(): void {
   }

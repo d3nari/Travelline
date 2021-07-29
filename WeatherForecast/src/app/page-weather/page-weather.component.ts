@@ -6,10 +6,12 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./page-weather.component.css']
 })
 export class PageWeatherComponent implements OnInit {
-  @Input() cityName : string = ""; 
+  @Input() cityName : string = "";
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
 
 }
