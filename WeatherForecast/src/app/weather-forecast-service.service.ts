@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 
-export class WeatherForecastServiceService {
+export class WeatherForecastService {
 
   constructor(private http: HttpClient) { }
 

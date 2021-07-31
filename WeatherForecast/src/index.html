@@ -13,64 +13,64 @@
   </head>
   <body>
     <script>
-      var cities = [
-        "Abakan",
-        "Azov",
-        "Alexandrov",
-        "Aleksin",
-        "Almetyevsk",
-        "Anapa",
-        "Angarsk",
-        "Anzhero",
-        "Apatity",
-        "Arzamas",
-        "Armavir",
-        "Arseniev",
-        "Moscow",
-      ];
+      // var cities = [
+      //   "Abakan",
+      //   "Azov",
+      //   "Alexandrov",
+      //   "Aleksin",
+      //   "Almetyevsk",
+      //   "Anapa",
+      //   "Angarsk",
+      //   "Anzhero",
+      //   "Apatity",
+      //   "Arzamas",
+      //   "Armavir",
+      //   "Arseniev",
+      //   "Moscow",
+      // ];
 
-      var f = 0;
+      // var f = 0;
 
-      function filterFunction() {
-        if (f != 0) {
-          deleteFunction(f);
-        }
-        f = 0;
-        input = document.getElementById("myInput").value;
-        if (input == "") return;
-        for (var i = 0; i < cities.length && f < 3; i++) {
-          if (cities[i].indexOf(input) != -1) {
-            if (document.getElementsByClassName("option")[f] != undefined) {
-              createFunction(i, f);
-              f++;
-            }
-          }
-        }
-      }
+      // function filterFunction() {
+      //   if (f != 0) {
+      //     deleteFunction(f);
+      //   }
+      //   f = 0;
+      //   input = document.getElementById("myInput").value;
+      //   if (input == "") return;
+      //   for (var i = 0; i < cities.length && f < 3; i++) {
+      //     if (cities[i].indexOf(input) != -1) {
+      //       if (document.getElementsByClassName("option")[f] != undefined) {
+      //         createFunction(i, f);
+      //         f++;
+      //       }
+      //     }
+      //   }
+      // }
 
-      function createFunction(i, f) {
-        let div = document.createElement("div");
-        div.className = "option";
-        div.innerHTML = cities[i];
-        div.id = f;
-        container.append(div);
-      }
+      // function createFunction(i, f) {
+      //   let div = document.createElement("div");
+      //   div.className = "option";
+      //   div.innerHTML = cities[i];
+      //   div.id = f;
+      //   container.append(div);
+      // }
 
-      function deleteFunction(f) {
-        for (var i = 0; i <= f; i++) {
-          if (document.getElementById(i) != null) {
-            document.getElementById(i).remove();
-          }
-        }
-      }
+      // function deleteFunction(f) {
+      //   for (var i = 0; i <= f; i++) {
+      //     if (document.getElementById(i) != null) {
+      //       document.getElementById(i).remove();
+      //     }
+      //   }
+      // }
 
-      function pushInto() {
-        container.onclick = function (e) {
-          let target = event.target;
-          console.log(target.innerHTML);
-          document.getElementById("myInput").value = target.innerHTML;
-        };
-      }
+      // function pushInto() {
+      //   container.onclick = function (e) {
+      //     let target = event.target;
+      //     console.log(target.innerHTML);
+      //     document.getElementById("myInput").value = target.innerHTML;
+      //   };
+      // }
     </script>
     <app-root></app-root>
   </body>
