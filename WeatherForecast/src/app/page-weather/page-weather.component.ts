@@ -24,7 +24,7 @@ export class PageWeatherComponent implements OnInit, OnDestroy {
       this.hasForecast = !!Object.keys(forecast).length;    
     })
     console.log(this.forecast)
-    await delay(400)
+    await delay(900)
     this.checkWeather();
     console.log(this.temperature)
     console.log(this.humidity)

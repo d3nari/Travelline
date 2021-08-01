@@ -8,7 +8,17 @@
   <div class="loader-container" *ngIf="!hasForecast">
     Происходит загрузка...
   </div>
-  <div class="weather-container" *ngIf="hasForecast">
+  <div
+    class="weather-container sunny"
+    *ngIf="hasForecast"
+    [ngClass]="{
+      'weather-container-sunny': humidity == 'sunny',
+      'weather-container-sunny-clouds': humidity == 'sunny_clouds',
+      'weather-container-clouds': humidity == 'clouds',
+      'weather-container-rain-clouds': humidity == 'rain_clouds',
+      'weather-container-hard-clouds': humidity == 'hard_clouds'
+    }"
+  >
     <div class="weather-content" *ngIf="forecast.wind.speed">
       <div class="wind weather-image"></div>
       <div class="weather-text">Wind speed (m/s):</div>

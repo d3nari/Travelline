@@ -42,6 +42,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     { name:"Armavir"},
     { name:"Norilsk"},
     { name:"Moscow"},
+    { name:"London"},
+    { name:"Paris"},
+    { name:"Kazan"},
+    { name:"Kabul"},
+    { name:"Algiers"},
+    { name:"Minsk"},
+    { name:"Ottawa"},
+    { name:"Beijing"},
+    { name:"Moroni"},
+    { name:"Tegucigalpa"},
+    { name:"Jakarta"},
+    { name:"Dublin"},
   ]
 
   ngOnInit() {

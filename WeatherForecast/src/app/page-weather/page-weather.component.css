@@ -35,6 +35,70 @@ div, h2, .weather-text
   margin: 180px 0px 260px 160px;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 358px 358px;
+  background-position: 75em;
+  background-position-y: 0em;
+}
+
+.weather-container-sunny
+{
+  margin: 180px 0px 260px 160px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 358px 358px;
+  background-position: 75em;
+  background-position-y: 0em;
+  background-image: url(../img/sunny.png);
+}
+
+.weather-container-sunny-clouds
+{
+  margin: 180px 0px 260px 160px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 635px 370px;
+  background-position: 65em;
+  background-position-y: 0em;
+  background-image: url(../img/sunny_clouds.png);
+}
+
+.weather-container-clouds
+{
+  margin: 180px 0px 260px 160px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 758px 370px;
+  background-position: 55em;
+  background-position-y: 0em;
+  background-image: url(../img/clouds.png);
+}
+
+.weather-container-rain-clouds
+{
+  margin: 180px 0px 260px 160px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 635px 385px;
+  background-position: 65em;
+  background-position-y: 0em;
+  background-image: url(../img/rain_clouds.png);
+}
+
+.weather-container-hard-clouds
+{
+  margin: 180px 0px 260px 160px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 635px 420px;
+  background-position: 65em;
+  background-position-y: 0em;
+  background-image: url(../img/hard_rain.png);
 }
 
 
