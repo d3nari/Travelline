@@ -1,19 +1,30 @@
-<div class="weather__wrapper">
-  <div class="weather-container">
-    <div class="weather-content">
+<div
+  class="weather__wrapper"
+  [ngClass]="{
+    weather__wrapper: temperature == 'summer',
+    'weather__wrapper-winter': temperature == 'winter'
+  }"
+>
+  <div class="loader-container" *ngIf="!hasForecast">
+    Происходит загрузка...
+  </div>
+  <div class="weather-container" *ngIf="hasForecast">
+    <div class="weather-content" *ngIf="forecast.wind.speed">
       <div class="wind weather-image"></div>
       <div class="weather-text">Wind speed (m/s):</div>
-      <div class="weather-text" id="wind"></div>
+      <div class="weather-text" id="wind">{{ forecast.wind.speed }}</div>
     </div>
-    <div class="weather-content">
+    <div class="weather-content" *ngIf="forecast.main.temp">
       <div class="temperature weather-image"></div>
       <div class="weather-text">Temperature (°С):</div>
-      <div class="weather-text" id="temperature"></div>
+      <div class="weather-text" id="temperature">{{ forecast.main.temp }}</div>
     </div>
-    <div class="weather-content">
+    <div class="weather-content" *ngIf="forecast.main.humidity">
       <div class="precipitation weather-image"></div>
-      <div class="weather-text">Precipitation (%):</div>
-      <div class="weather-text" id="precipitation"></div>
+      <div class="weather-text">Humidity (%):</div>
+      <div class="weather-text" id="precipitation">
+        {{ forecast.main.humidity }}
+      </div>
     </div>
   </div>
 </div>

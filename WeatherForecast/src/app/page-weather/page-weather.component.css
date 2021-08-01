@@ -12,6 +12,22 @@ div, h2, .weather-text
   background: none;
   height: 1080px;
   width: 100%;
+  background-image: url(../img/forecast_back_summer.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.weather__wrapper-winter
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: none;
+  height: 1080px;
+  width: 100%;
+  background-image: url(../img/forecast_back_winter.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
 }
 
 .weather-container
@@ -20,6 +36,8 @@ div, h2, .weather-text
   display: flex;
   flex-direction: column;
 }
+
+
 
 .weather-content
 {
@@ -67,4 +85,10 @@ div, h2, .weather-text
 {
   margin-left: 3px;
   margin-top: 1px;
+}
+
+.loader-container
+{
+  display: flex;
+  justify-content: center;
 }

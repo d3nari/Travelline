@@ -14,14 +14,13 @@
         />
         <button
           (click)="getCityName()"
-          [routerLink]="['/app-page-weather']"
           class="input-button"
+          [routerLink]="['/page-weather']"
         >
           <img src="assets/scope.png" class="input-button-scope" />
         </button>
       </div>
-      <div class="container" id="container" onclick="pushInto()">
-        <div class="option">Выбери свой город!</div>
+      <div class="container" id="container">
         <div
           class="option"
           *ngFor="let city of cities"

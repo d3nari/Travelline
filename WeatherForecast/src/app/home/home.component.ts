@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { WeatherForecastService } from '../weather-forecast-service.service';
+import { DataService } from "../service/data.service";
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -10,56 +12,80 @@ import { WeatherForecastService } from '../weather-forecast-service.service';
   
 })
 
-export class HomeComponent implements OnInit {
+
+export class HomeComponent implements OnInit, OnDestroy {
   forecasts: any = [];
   cityname: any = [];
   cities: any = [];
   userCity: string = '';
+  message: object = {};
+  subscription: any;
 
   baseForm = new FormGroup({
     name: new FormControl(''),
   });
 
-  constructor(private weatherForecastService: WeatherForecastService) {}
+
+  constructor(private weatherForecastService: WeatherForecastService, private data: DataService) {}
 
   cityList: any[] = [
-    {id: 1, name:'Abakan'},
-    {id: 1, name:'Azov'},
-    {id: 1, name:"Alexandrov"},
-    {id: 1, name:"Aleksin"},
-    {id: 1, name:"Almetyevsk"},
-    {id: 1, name:"Anapa"},
-    {id: 1, name:"Angarsk"},
-    {id: 1, name:"Anzhero"},
-    {id: 1, name:"Apatity"},
-    {id: 1, name:"Arzamas"},
-    {id: 1, name:"Armavir"},
-    {id: 1, name:"Arseniev"},
-    {id: 1, name:"Moscow"},
+    { name:'Abakan'},
+    { name:'Azov'},
+    { name:"Alexandrov"},
+    { name:"Aleksin"},
+    { name:"Almetyevsk"},
+    { name:"Anapa"},
+    { name:"Angarsk"},
+    { name:"Anzhero"},
+    { name:"Apatity"},
+    { name:"Arzamas"},
+    { name:"Armavir"},
+    { name:"Norilsk"},
+    { name:"Moscow"},
   ]
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.subscription = this.data.currentMessage.subscribe(message => this.message = message)
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
+  newMessage(forecasts: any) {
+    this.data.changeMessage(forecasts)
   }
 
   getForecast(): void {
-    this.forecasts = this.weatherForecastService.getForecast(this.cityname).subscribe(data => console.log(data));
+    this.forecasts = this.weatherForecastService.getForecast(this.cityname).subscribe(data => {
+      this.newMessage(data);
+      console.log(data)
+    });
   }
 
   getCityName(): void {
     this.cityname = document.getElementsByTagName("input")[0].value;
-    console.log(this.cityname)
     this.getForecast();
   }
 
   changeCity(keyword: any): void {
     this.userCity = keyword;
-    console.log('keyword', keyword);
-    this.cities = this.cityList.filter(city => city.name.startsWith(keyword)); 
-    if (this.cities.length > 3)
+    if (keyword == '')
     {
-      this.cities.length = 3;
+      this.cities = []
     }
-    console.log(this.cities);
+    else
+    {
+      this.cities = this.cityList.filter(city => city.name.startsWith(keyword)); 
+      if (this.cities.length > 3)
+      {
+        this.cities.length = 3;
+      }
+      if (this.cities.length == 0)
+      {
+        this.cities.push({id: 1, name: 'Неправильно введен город!'})
+      }
+    }  
   }
 
   onSelect(city: string): void {

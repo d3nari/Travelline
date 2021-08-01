@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WeatherForecastService } from './weather-forecast-service.service';
+import { DataService } from './service/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PageWeatherComponent } from './page-weather/page-weather.component';
 import { RouterModule } from '@angular/router';
@@ -28,7 +29,7 @@ import { RouterModule } from '@angular/router';
       { path: 'app-page-weather', component: PageWeatherComponent }, 
     ])
   ],
-  providers: [WeatherForecastService],
+  providers: [WeatherForecastService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
