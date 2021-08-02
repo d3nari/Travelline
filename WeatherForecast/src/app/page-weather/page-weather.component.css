@@ -32,7 +32,7 @@ div, h2, .weather-text
 
 .weather-container
 {
-  margin: 180px 0px 260px 160px;
+  margin: 100px 0px 260px 160px;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@ div, h2, .weather-text
 
 .weather-container-sunny
 {
-  margin: 180px 0px 260px 160px;
+  margin: 100px 0px 260px 160px;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -55,7 +55,7 @@ div, h2, .weather-text
 
 .weather-container-sunny-clouds
 {
-  margin: 180px 0px 260px 160px;
+  margin: 100px 0px 260px 160px;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ div, h2, .weather-text
 
 .weather-container-clouds
 {
-  margin: 180px 0px 260px 160px;
+  margin: 100px 0px 260px 160px;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ div, h2, .weather-text
 
 .weather-container-rain-clouds
 {
-  margin: 180px 0px 260px 160px;
+  margin: 100px 0px 260px 160px;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@ div, h2, .weather-text
 
 .weather-container-hard-clouds
 {
-  margin: 180px 0px 260px 160px;
+  margin: 100px 0px 260px 160px;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -155,4 +155,14 @@ div, h2, .weather-text
 {
   display: flex;
   justify-content: center;
+  margin-top: 400px;
+}
+
+.city-name
+{
+  align-self: center;
+  font-size: 40px;
+  line-height: 30px;
+  margin-top: 40px;
+  color: #575757;
 }

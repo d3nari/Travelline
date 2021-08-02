@@ -54,6 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     { name:"Tegucigalpa"},
     { name:"Jakarta"},
     { name:"Dublin"},
+    { name: "Dudinka"},
   ]
 
   ngOnInit() {
@@ -69,6 +70,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getForecast(): void {
+    this.newMessage({name: this.cityname})
     this.forecasts = this.weatherForecastService.getForecast(this.cityname).subscribe(data => {
       this.newMessage(data);
       console.log(data)
