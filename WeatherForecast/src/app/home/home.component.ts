@@ -4,14 +4,12 @@ import { WeatherForecastService } from '../weather-forecast-service.service';
 import { DataService } from "../service/data.service";
 import { Subscription } from 'rxjs';
 
-
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
   
 })
-
 
 export class HomeComponent implements OnInit, OnDestroy {
   forecasts: any = [];
@@ -24,7 +22,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   baseForm = new FormGroup({
     name: new FormControl(''),
   });
-
 
   constructor(private weatherForecastService: WeatherForecastService, private data: DataService) {}
 
@@ -55,6 +52,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     { name:"Jakarta"},
     { name:"Dublin"},
     { name: "Dudinka"},
+    { name: "Murmansk"},  
+    { name: "McMurdo Station"}
   ]
 
   ngOnInit() {

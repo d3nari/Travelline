@@ -39,7 +39,7 @@ export class PageWeatherComponent implements OnInit, OnDestroy {
   }
   
   checkTemp(): void {
-    if (this.forecast.main.temp > 25)
+    if (this.forecast.main.temp > 10)
     {
       this.temperature = 'summer'; 
     }
